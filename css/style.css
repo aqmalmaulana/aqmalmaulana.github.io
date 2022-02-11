@@ -12,6 +12,7 @@
     --fontcolorgrey : #909096;
     --fontcolorgreen : #829900;
     --bottomanimation : 170px;
+    --bottomanimationphone : 100px;
 }
 
 html {
@@ -399,17 +400,59 @@ div#contact .container-text .myself .animationText {
         margin: 40px 0;
     }
 }
-@media screen and (max-width:500px) {
-    .container-text {
-        margin: 20px;
-    }
 
+@media screen and (max-height:800px) {
     div#mySkill {
         margin-top: 200px;
         height: 300vh;
     }
+}
+
+@media screen and (max-width:500px) {
+    .container-text {
+        width: 85%;
+        margin: 20px;
+    }
 
     input {
         width: 100%;
+    }
+    .name .scroll-down {
+        font-size: 10px;
+        margin-left: 20px;
+        bottom: var(--bottomanimationphone);
+    }
+
+    @keyframes bounce {
+        0% {
+            bottom: calc(var(--bottomanimationphone) + 50px);
+        }
+        50% {
+            bottom: calc(var(--bottomanimationphone));
+        }
+        100% {
+            bottom: calc(var(--bottomanimationphone) + 50px);
+        }
+    }
+    .form form input {
+        height: 10vw;
+        border-radius: 5px;
+        width: 100%;
+    }
+    .form form textarea {
+        width: 100%;
+        height: 45vw;
+        border-radius: 5%;
+        resize: none;
+    }
+
+    .form form button {
+        width: 50vw;
+        height: 12vw;
+        border-radius: 5px;
+        padding: 5px;
+        color: #333;
+        font-weight: 600;
+        margin-top: 20px;
     }
 }

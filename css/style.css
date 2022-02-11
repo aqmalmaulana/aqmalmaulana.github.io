@@ -274,6 +274,10 @@ div#about .about .paragraf-about p {
     opacity: 0.5;
 }
 
+div#mySkill {
+    height: 120vh;
+}
+
 .skill {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -307,10 +311,12 @@ div.skill .skill-text .myself .animationText {
 
 
 #contact {
+    width: 100%;
     display: grid;
     align-items: center;
 }
 .form form {
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -389,9 +395,21 @@ div#contact .container-text .myself .animationText {
     .container-text {
         font-size: 5vw;
     }
+    .section-right {
+        margin: 40px 0;
+    }
 }
 @media screen and (max-width:500px) {
     .container-text {
         margin: 20px;
+    }
+
+    div#mySkill {
+        margin-top: 200px;
+        height: 300vh;
+    }
+
+    input {
+        width: 100%;
     }
 }

@@ -401,7 +401,7 @@ div#contact .container-text .myself .animationText {
     }
 }
 
-@media screen and (max-height:800px) {
+@media screen and (max-height:768px) {
     div#mySkill {
         margin-top: 200px;
         height: 300vh;

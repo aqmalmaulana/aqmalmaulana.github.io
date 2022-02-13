@@ -20,6 +20,13 @@ for ( let i = 0; i < animationText.length; i++ ) {
     });
 }
 
+const splitText2 = document.querySelectorAll('.text-scroll-down');
+
+for ( let i = 0; i < splitText2.length; i++ ) {
+    splitText2[i].innerHTML = splitText2[i].textContent.replace(/\S/g, `<span>$&</span>`);
+};
+
+
 // animation typing 
 const breakLineAnimation = '^20 <br/>'
 var typed1 = new Typed('#typing', {
@@ -60,13 +67,6 @@ var typed1 = new Typed('#typing', {
     shuffle: false,
     loop: true
   });
-
-const splitText2 = document.querySelectorAll('.text-scroll-down');
-
-for ( let i = 0; i < splitText2.length; i++ ) {
-    splitText2[i].innerHTML = splitText2[i].textContent.replace(/\S/g, `<span>$&</span>`);
-};
-
 var placeholderName = new Typed('#name', {
     strings: [
         'Your Name', 
@@ -102,3 +102,37 @@ let placeholderEmail = new Typed('#email', {
     smartBackspace: true,
     loop: true
   });
+
+let placeholderSubject = new Typed('#subject', {
+    strings: [
+        'Subject' 
+    ],
+    typeSpeed: 30,
+    backSpeed: 20,
+    cursorChar: '_',
+    attr: 'placeholder',
+    bindInputFocusEvents: false,
+    smartBackspace: true,
+  });
+
+let placeholderMessage = new Typed('#message', {
+    strings: [
+        'Message' 
+    ],
+    typeSpeed: 30,
+    backSpeed: 20,
+    cursorChar: '',
+    attr: 'placeholder',
+    bindInputFocusEvents: false,
+    smartBackspace: true,
+  });
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwdC96cusy7eZHQsomGzU0c99KijLfI1ShuaIKjK3JBOjy9-VQvjcJCTO71CXI9W-2TJg/exec';
+const form = document.forms['form-portfolio'];
+
+form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message))
+  })

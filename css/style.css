@@ -2,32 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
     text-decoration: none;
-}
-#particles-js {
-    height: 100%;
-}
-:root {
-    --fontcolorgrey : #909096;
-    --fontcolorgreen : #829900;
-    --bottomanimation : 170px;
-    --bottomanimationphone : 100px;
 }
 
 html {
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    
+}
+
+:root {
+    --fontcolorgrey : #909096;
+    --fontcolorgreen : #829900;
+    --fontsizetittle : 40px;
+    --fontsizeparagraph : 14px;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 0.1fr 1fr;
-    background-color: rgb(29,29,29);
+    grid-template-columns: 0.12fr 1fr;
+    height: 100vh;
 }
 
+/*
+    Navbar Here guys
+*/
+.section-left {
+    background-color: blue;
+    box-sizing: border-box;
+}
 .menuTab {
     width: 100%;
     height: 100vh;
@@ -38,7 +41,11 @@ html {
     text-align: center;
     background-color: #181818;
     position: sticky;
+    list-style: none;
     top: 0;
+}
+.menuTab li {
+    width: 100%;
 }
 .menuTab li:first-child a {
     height: 200px;
@@ -46,7 +53,7 @@ html {
 .menuTab li a {
     display: grid;
     align-items: center;
-    width: 140px;
+    width: 100%;
     height: 50px;
     background-color: #181818;
     color: var(--fontcolorgrey);
@@ -54,7 +61,6 @@ html {
     border-top: 1px solid #1d1d1d ;
     border-bottom: 1px solid #1d1d1d ;
 }
-
 .menuTab li a:hover {
     color: var(--fontcolorgreen);
 }
@@ -78,75 +84,33 @@ html {
     color: var(--fontcolorgreen);
     cursor: pointer;
 }
-    
-.section {
-    height: 100vh;
+/* 
+    Navbar End Here 
+*/
+  
+.section-right {
     background-color: #1d1d1d;
+    width: 100%;
 }
-
-.particles-js-canvas-el {
+.container-myself {
     height: 100vh;
-    z-index: 10;
+    display: grid;
+    align-items: center;
 }
-
-.name .container-text {
-    top: 25%;
-}
-.name .scroll-down {
-    z-index: 2;
-    margin-left: 50px;
-    bottom: var(--bottomanimation);
+#particles-js {
+    height: 100vh;
     position: relative;
-    font-size: 20px;
-    text-transform: uppercase;
-    width: 1px;
-    color: var(--fontcolorgrey);
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
 }
-
-.text-scroll-down span{
-    display: flex;
-    flex-flow: row;
-}
-
-.name .scroll-down .arrow-down {
-    border: solid var(--fontcolorgrey);
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-.scroll-down {
-    animation: bounce 1s ease-in-out infinite;
-}
-
-@keyframes bounce {
-    0% {
-        bottom: calc(var(--bottomanimation) + 50px);
-    }
-    50% {
-        bottom: calc(var(--bottomanimation));
-    }
-    100% {
-        bottom: calc(var(--bottomanimation) + 50px);
-    }
-}
-
 .container-text {
-    margin-left: 100px;
     position: absolute;
-    font-family: 'Poppins', sans-serif;
-    font-size: 30px;
+    margin-left: 100px;
+    font-size: var(--fontsizetittle);
 }
 .container-text p {
     margin-top: 5px;
     font-family: 'Poppins', sans-serif;
     color: #eaeaea;
-    font-size: 14px;
+    font-size: var(--fontsizeparagraph);
     letter-spacing: 6px;
     font-weight: 300;
 }
@@ -236,276 +200,188 @@ html {
         -ms-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)
     }
 }
-div#about {
+
+.name .scroll-down {
+    z-index: 2;
+    margin-left: 50px;
+    bottom: var(--bottomanimation);
     position: relative;
-}
-
-div#about .container-text .myself .animationText {
-    color: var(--fontcolorgreen);
-}
-
-div#about .about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    align-items: center;
-}
-
-div#about .about .paragraf-about p {
-    letter-spacing: 2px;
-}
-
-.backText {
-    font-size: 20vw;
-    position: absolute;
-    color: rgba(255, 255, 255, 2%);
+    font-size: 20px;
+    text-transform: uppercase;
+    width: 1px;
+    color: var(--fontcolorgrey);
     user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
 }
-
-.section-right {
-    align-self: center;
-    margin: 0 20px 0 60px;
-    font-size: 28px;
-    color: var(--fontcolorgreen);
-}
-
-#typing {
-    opacity: 0.5;
-}
-
-div#mySkill {
-    height: 120vh;
-}
-
-.skill {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100%;
-    font-size: 30px;
-    font-weight: 300;
-    color: #eaeaea;
-    align-items: center;
-}
-
-.skill-text {
-    align-self:center;
-}
-
-.skill p {
-    font-size: 16px;
-    letter-spacing: 2px;
-}
-
-div.skill .skill-text .myself .animationText {
-    color: var(--fontcolorgreen);
-}
-.skill-logo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.skill-logo img {
-    margin: 10px;
-}
-
-
-#contact {
-    width: 100%;
-    display: grid;
-    align-items: center;
-}
-.form form {
-    width: 100%;
+.text-scroll-down {
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
+    text-align: center;
+}
+.arrow-down {
+    border: solid var(--fontcolorgrey);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+.scroll-down {
+    color: var(--fontcolorgrey);
+    text-align: center;
+    margin-left: 50px;
+    position: absolute;
+    align-self: end;
+    animation: bounce 1s ease-in-out infinite;
 }
 
-.form form input {
-    width: 30vw;
-    height: 3vw;
-    font-size: 1.5vw;
-    padding: 10px;
-    border-radius: 10px;
-    border:none;
-    margin: 10px 0;
+@keyframes bounce {
+    0% {
+        bottom: 50px;
+    }
+    50% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 50px;
+    }
 }
 
-.form form textarea {
-    width: 50vw;
-    height: 25vw;
-    border-radius: 10px;
-    margin-top: 10px ;
-    padding: 10px;
-    font-size: 1.5vw;
-    resize: none;
-}
 
-.form form textarea:focus {
-    background-color: var(--fontcolorgrey);
-    border: none;
-}
 
-.form form button {
-    width: 10vw;
-    height: 3vw;
-    border-radius: 10px;
-    border: none;
-    background-color: #eaeaea;
-    color: #333;
-    font-weight: 600;
-    cursor: pointer;
+/* This about, start in here */
+section#about {
+    height: 100vh;
+    display: grid;
 }
-
-.form form button:hover {
-    background-color: var(--fontcolorgreen);
-    color: #333;
+.backText {
+    position: absolute;
+    font-size: 12vw;
+    opacity: 0.1;
+    user-select: none;
 }
-
-div#contact .container-text .myself .animationText {
+.container-about {
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+}
+section#about .myself .animationText {
+    color: var(--fontcolorgreen);
+}
+section#about .container-about .about-left h1.myself  {
+    font-size: 70px;
+    margin-bottom: 50px;
+}
+section#about .about-left p {
+    letter-spacing: 2px;
+    font-size: var(--fontsizeparagraph);
+    color: var(--fontcolorgrey);
+}
+.about-right {
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    font-size: calc(var(--fontsizeparagraph) + 10px);
     color: var(--fontcolorgreen);
 }
 
-@media screen and (max-width: 1000px) {
-    .container {
-        grid-template-columns: 1fr;
-    }
-    #menuTab {
-        display: none;
-    }
+/* Skill */
+section#skill {
+    height: 100vh;
+    display: grid;
 }
 
-@media screen and (max-width:876px) {
-    .container-text {
-        margin-left: 50px;
-    }
-    div#about .about {
-        display: block;
-    }
-
-    .section-right {
-        margin-top: 50px;
-    }
-    .skill {
-        display: block;
-    }
-    .skill-logo {
-        margin-top: 50px;
-    }
-    .container-text {
-        font-size: 5vw;
-    }
-    .section-right {
-        margin: 40px 0;
-    }
-    .container-text {
-        width: 85%;
-        margin: 20px;
-    }
-    
-    input {
-        width: 100%;
-    }
-    .name .scroll-down {
-        font-size: 10px;
-        margin-left: 20px;
-        bottom: var(--bottomanimationphone);
-    }
-    
-    @keyframes bounce {
-        0% {
-            bottom: calc(var(--bottomanimationphone) + 50px);
-        }
-        50% {
-            bottom: calc(var(--bottomanimationphone));
-        }
-        100% {
-            bottom: calc(var(--bottomanimationphone) + 50px);
-        }
-    }
-    .form form input {
-        height: 10vw;
-        border-radius: 5px;
-        width: 100%;
-    }
-    .form form textarea {
-        width: 100%;
-        height: 45vw;
-        border-radius: 5%;
-        resize: none;
-    }
-    
-    .form form button {
-        width: 50vw;
-        height: 12vw;
-        border-radius: 5px;
-        padding: 5px;
-        color: #333;
-        font-weight: 600;
-        margin-top: 20px;
-    }
-    
+section#skill .myself .animationText {
+    color: var(--fontcolorgreen);
 }
 
-@media screen and (max-width:500px) {
-    .container-text {
-        width: 85%;
-        margin: 20px;
-    }
-
-    input {
-        width: 100%;
-    }
-    .name .scroll-down {
-        font-size: 10px;
-        margin-left: 20px;
-        bottom: var(--bottomanimationphone);
-    }
-
-    @keyframes bounce {
-        0% {
-            bottom: calc(var(--bottomanimationphone) + 50px);
-        }
-        50% {
-            bottom: calc(var(--bottomanimationphone));
-        }
-        100% {
-            bottom: calc(var(--bottomanimationphone) + 50px);
-        }
-    }
-    .form form input {
-        height: 10vw;
-        border-radius: 5px;
-        width: 100%;
-    }
-    .form form textarea {
-        width: 100%;
-        height: 45vw;
-        border-radius: 5%;
-        resize: none;
-    }
-
-    .form form button {
-        width: 50vw;
-        height: 12vw;
-        border-radius: 5px;
-        padding: 5px;
-        color: #333;
-        font-weight: 600;
-        margin-top: 20px;
-    }
-
-    #contact {
-        margin-top: 250px;
-    }
+.container-skill {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
-@media screen and (max-width:320px) {
-    #contact {
-        margin-top: 750px;
-    }
-    div#mySkill {
-        margin-top: 200px;
-    }
+.skill-left {
+    font-size: var(--fontsizetittle);
+}
+
+.skill-left p {
+    font-size: calc(var(--fontsizeparagraph) + 1px);
+    letter-spacing: 2px;
+    color: var(--fontcolorgrey);
+}
+
+.skill-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-right img {
+    margin: 10px;
+    width: 120px;
+}
+
+/* contact */
+
+section#contact {
+    height: 100vh;
+    display: grid;
+    padding: 50px;
+}
+.container-contact {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.7fr 1fr;
+}
+
+section#contact .myself .animationText {
+    font-size: calc(var(--fontsizetittle) + 30px);
+    color: var(--fontcolorgreen);
+}
+
+section#contact p {
+    font-size: calc(var(--fontsizeparagraph) + 5px);
+    color: var(--fontcolorgrey);
+    margin: 20px 0;
+}
+.container-contact form input[name = name],
+.container-contact form input[name = subject] {
+    width: 49%;
+}
+.container-contact form input {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    outline: none;
+}
+.container-contact form input:focus,
+.container-contact form textarea:focus {
+    border: 2px solid var(--fontcolorgreen);
+}
+.container-contact form textarea {
+    outline: none;
+    resize: none;
+    padding: 10px;
+    font-size: 18px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container-contact form button {
+    width: 30%;
+    height: 40px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.container-contact form button:hover {
+    border: none;
+    background-color: var(--fontcolorgreen);
 }

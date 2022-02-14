@@ -428,11 +428,7 @@ section#contact p {
     }
 }
 
-@media only screen and (max-width: 600px ) {
-    .menuTab,
-    .section-left {
-        display: none;
-    }
+@media only screen and (max-width: 768px ) {
     .about-right {
         font-size: var(--fontsizeparagraph) + 10px;
     }

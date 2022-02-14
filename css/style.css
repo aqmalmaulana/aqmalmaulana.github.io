@@ -401,7 +401,6 @@ section#contact p {
 }
 
 @media only screen and (max-width : 992px ) {
-    
     .menuTab,
     .section-left {
         display: none;

@@ -330,9 +330,9 @@ section#skill .myself .animationText {
 /* contact */
 
 section#contact {
-    height: 100vh;
     display: grid;
     padding: 50px;
+    position: relative;
 }
 .container-contact {
     display: grid;
@@ -384,4 +384,54 @@ section#contact p {
 .container-contact form button:hover {
     border: none;
     background-color: var(--fontcolorgreen);
+}
+
+#message-form {
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    background-color: #ffc107;
+    color: #333;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    opacity: 0.9;
+    display: none;
+}
+
+@media only screen and (max-width : 992px ) {
+    
+    .menuTab,
+    .section-left {
+        display: none;
+    }
+    .container,
+    .container-about,
+    .container-skill,
+    .container-contact {
+        grid-template-columns: 1fr;
+    }
+
+    .container-text {
+        font-size: calc(var(--fontsizetittle) + 10px);
+    }
+    .container-about {
+        grid-template-rows: 0.5fr 1fr;
+    }
+    .about-right {
+        font-size: calc(var(--fontsizeparagraph) + 20px);
+    }
+    section#about .about-left p {
+        font-size: calc(var(--fontsizeparagraph) + 2px);
+    }
+}
+
+@media only screen and (max-width: 600px ) {
+    .about-right {
+        font-size: var(--fontsizeparagraph) + 5px;
+    }
+    .container-text {
+        font-size: var(--fontsizetittle) - 10px;
+    }
 }

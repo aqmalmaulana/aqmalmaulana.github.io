@@ -127,12 +127,21 @@ let placeholderMessage = new Typed('#message', {
     smartBackspace: true,
   });
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwdC96cusy7eZHQsomGzU0c99KijLfI1ShuaIKjK3JBOjy9-VQvjcJCTO71CXI9W-2TJg/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxKO44qWEQKzXWmsgGhZ6xOuYlMaeZNyIVW58sxRBknrJVA_pJ0d39-Fk-udBJ-VXyf/exec ';
 const form = document.forms['form-portfolio'];
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', function(e) {
+    const messageForm = document.getElementById('message-form');
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message))
-  })
+    .then(Response => {
+        messageForm.style.display = "flex";
+        form.reset();
+        console.log('success!', response)
+    })
+    .catch(error => console.log('Error!', error.message))
+
+    setTimeout(() => {
+        messageForm.style.display = "none";
+    }, 5000);
+})

@@ -374,6 +374,7 @@ section#contact p {
     font-size: 18px;
     width: 100%;
     margin-top: 10px;
+    background-color: #fff;
 }
 
 .container-contact form button {
@@ -442,7 +443,11 @@ section#contact p {
     }
     .container-about,
     .container-skill,
-    section#contact .container-contact {
+    section#contact {
         padding: 20px;
+    }
+    .skill-right img {
+        margin: 10px;
+        width: 90px;
     }
 }

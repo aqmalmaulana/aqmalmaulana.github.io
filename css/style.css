@@ -443,7 +443,7 @@ section#contact p {
     }
     .container-about,
     .container-skill,
-    .container-contact {
+    section#contact .container-contact {
         padding: 20px;
     }
 }

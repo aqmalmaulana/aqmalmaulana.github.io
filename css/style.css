@@ -434,12 +434,11 @@ section#contact p {
         font-size: calc(var(--fontsizeparagraph) + 15px);
     }
     .container-text {
-        font-size: calc(var(--fontsizetittle) + 10px);
         margin-left: 10%;
     }
     section#about .container-about .about-left h1.myself,
     .myself {
-        font-size: var(--fontsizetittle);
+        font-size: calc(var(--fontsizetittle) - 10px);;
     }
     .container-about,
     .container-skill,

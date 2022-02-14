@@ -361,6 +361,7 @@ section#contact p {
     margin: 10px 0;
     font-size: 16px;
     outline: none;
+    background-color: #fff;
 }
 .container-contact form input:focus,
 .container-contact form textarea:focus {
@@ -430,15 +431,15 @@ section#contact p {
 
 @media only screen and (max-width: 768px ) {
     .about-right {
-        font-size: var(--fontsizeparagraph) + 10px;
+        font-size: calc(var(--fontsizeparagraph) + 15px);
     }
     .container-text {
-        font-size: var(--fontsizetittle) - 10px;
+        font-size: calc(var(--fontsizetittle) + 10px);
         margin-left: 10%;
     }
     section#about .container-about .about-left h1.myself,
     .myself {
-        font-size: 30px;
+        font-size: calc(var(--fontsizetittle) + 20px);
     }
     .container-about,
     .container-skill,

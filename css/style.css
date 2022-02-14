@@ -409,7 +409,9 @@ section#contact p {
     .container-about,
     .container-skill,
     .container-contact {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .container-text {
@@ -427,10 +429,24 @@ section#contact p {
 }
 
 @media only screen and (max-width: 600px ) {
+    .menuTab,
+    .section-left {
+        display: none;
+    }
     .about-right {
-        font-size: var(--fontsizeparagraph) + 5px;
+        font-size: var(--fontsizeparagraph) + 10px;
     }
     .container-text {
         font-size: var(--fontsizetittle) - 10px;
+        margin-left: 10%;
+    }
+    section#about .container-about .about-left h1.myself,
+    .myself {
+        font-size: 30px;
+    }
+    .container-about,
+    .container-skill,
+    .container-contact {
+        padding: 20px;
     }
 }

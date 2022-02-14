@@ -439,7 +439,7 @@ section#contact p {
     }
     section#about .container-about .about-left h1.myself,
     .myself {
-        font-size: calc(var(--fontsizetittle) + 20px);
+        font-size: var(--fontsizetittle);
     }
     .container-about,
     .container-skill,

@@ -96,12 +96,12 @@ body {
     width: 100%;
 }
 .container-myself {
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     align-items: center;
 }
 #particles-js {
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
 }
 .container-text {

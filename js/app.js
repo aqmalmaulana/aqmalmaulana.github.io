@@ -145,3 +145,24 @@ form.addEventListener('submit', function(e) {
         messageForm.style.display = "none";
     }, 5000);
 })
+
+const containerNavbarResponsive = document.getElementsByClassName('menu-res')[0];
+const containerNavbar = document.getElementById('menuTab');
+const HamburgerMenu = containerNavbarResponsive.querySelector('ul li:nth-child(2)');
+const closeMenu = document.getElementsByClassName('close')[0];
+
+HamburgerMenu.addEventListener('click', () => {
+    containerNavbar.style.display = "inline";
+    containerNavbarResponsive.style.display = "none";
+    HamburgerMenu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="6vw" height="6vw" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+    </svg>`;
+})
+
+closeMenu.addEventListener('click', ()=> {
+    containerNavbar.style.display = "none";
+    containerNavbarResponsive.style.display = "inline";
+    HamburgerMenu.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="6vw" height="6vw" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>`;
+})

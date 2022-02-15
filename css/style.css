@@ -10,6 +10,9 @@ html {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
+body {
+    background-color: #1d1d1d ;
+}
 
 :root {
     --fontcolorgrey : #909096;
@@ -21,7 +24,7 @@ html {
 .container {
     display: grid;
     grid-template-columns: 0.12fr 1fr;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /*
@@ -33,7 +36,7 @@ html {
 }
 .menuTab {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -93,12 +96,12 @@ html {
     width: 100%;
 }
 .container-myself {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
     align-items: center;
 }
 #particles-js {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
 }
 .container-text {
@@ -253,7 +256,7 @@ html {
 
 /* This about, start in here */
 section#about {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
 }
 .backText {
@@ -264,7 +267,7 @@ section#about {
 }
 .container-about {
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     padding: 50px;
     display: grid;
     grid-template-columns: 1fr 0.8fr;
@@ -291,7 +294,7 @@ section#about .about-left p {
 
 /* Skill */
 section#skill {
-    height: 100vh;
+    min-height: 100vh;
     display: grid;
 }
 
@@ -330,6 +333,7 @@ section#skill .myself .animationText {
 /* contact */
 
 section#contact {
+    min-height: 100vh;
     display: grid;
     padding: 50px;
     position: relative;
@@ -361,7 +365,8 @@ section#contact p {
     margin: 10px 0;
     font-size: 16px;
     outline: none;
-    background-color: #fff;
+    background-color: #2b2b2b;
+    border: none; 
 }
 .container-contact form input:focus,
 .container-contact form textarea:focus {
@@ -374,7 +379,8 @@ section#contact p {
     font-size: 18px;
     width: 100%;
     margin-top: 10px;
-    background-color: #fff;
+    background-color: #2b2b2b;
+    border: none;
 }
 
 .container-contact form button {
@@ -449,5 +455,37 @@ section#contact p {
     .skill-right img {
         margin: 10px;
         width: 90px;
+    }
+}
+@media only screen and (max-width: 600px ) {
+    .about-right {
+        font-size: calc(var(--fontsizeparagraph) - 2px);
+    }
+    section#about .container-about .about-left h1.myself,
+    .myself {
+        font-size: calc(var(--fontsizetittle) - 15px);;
+    }
+    .container-about,
+    .container-skill,
+    section#contact {
+        padding: 20px;
+    }
+    .skill-right img {
+        margin: 20px 0;
+        width: 50vw;
+    }
+    section#skill {
+        height: 50%;
+    }
+    .skill-right {
+        flex-direction: column;
+    }
+    .scroll-down {
+        font-size: 11px;
+        margin-left: 25px;
+    }
+    .container-text p {
+        font-size: calc(var(--fontsizeparagraph) - 5px);
+        font-weight: 200;
     }
 }

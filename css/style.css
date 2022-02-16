@@ -212,20 +212,6 @@ body {
         -ms-transform:scale3d(1, 1, 1);transform:scale3d(1, 1, 1)
     }
 }
-
-.name .scroll-down {
-    z-index: 2;
-    margin-left: 50px;
-    bottom: var(--bottomanimation);
-    position: relative;
-    font-size: 20px;
-    text-transform: uppercase;
-    width: 1px;
-    color: var(--fontcolorgrey);
-    user-select: none;
-    -ms-user-select: none;
-    -webkit-user-select: none;
-}
 .text-scroll-down {
     display: flex;
     flex-direction: column;
@@ -243,9 +229,12 @@ body {
 .scroll-down {
     color: var(--fontcolorgrey);
     text-align: center;
-    margin-left: 50px;
     position: absolute;
+    margin-left: 50px;
     align-self: end;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
     animation: bounce 1s ease-in-out infinite;
 }
 
@@ -418,7 +407,12 @@ section#contact p {
 }
 
 @media only screen and (max-width : 992px ) {
-    /* .container, */
+    .scroll-down {
+        position: relative;
+        justify-self: self-start;
+        transform: translateY(-20vw);
+    }
+
     .container-about,
     .container-skill,
     .container-contact {

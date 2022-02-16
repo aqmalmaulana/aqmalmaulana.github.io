@@ -33,6 +33,7 @@ body {
 .section-left {
     background-color: #1d1d1d;
     box-sizing: border-box;
+    transition: 1s;
 }
 .menuTab {
     width: 100%;
@@ -447,12 +448,23 @@ section#contact p {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .menuTab {
+    .menuTab,
+    .section-left {
         display: none;
+    }
+    .section-left {
+        position: fixed;
+        width: 30%;
+        z-index: 2;
+        height: 100vh;
+    }
+    .icon-medsos .fa {
+        color: #fff;
     }
     .close {
         display: block;
         cursor: pointer;
+        color: #fff;
     }
 
     .menuTab li:first-child a {
@@ -476,6 +488,7 @@ section#contact p {
     .menu-res ul li svg,
     .menu-res ul li a {
         cursor: pointer;
+        color: #fff;
     }
     .about-right {
         font-size: calc(var(--fontsizeparagraph) + 15px);

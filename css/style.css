@@ -302,30 +302,68 @@ section#skill .myself .animationText {
 
 .container-skill {
     padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-
-.skill-left {
+.container-skill .myself {
     font-size: var(--fontsizetittle);
 }
-
-.skill-left p {
-    font-size: calc(var(--fontsizeparagraph) + 1px);
-    letter-spacing: 2px;
-    color: var(--fontcolorgrey);
-}
-
-.skill-right {
+.logo-skill {
+    width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.logo-skill li {
+    min-width: 200px;
+    min-height: 200px;
+    margin: 20px;
+    list-style-type: none;
+    display: grid;
+    justify-content: center;
     align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 20px;
+    flex-direction: row;
+}
+.logo-skill li:nth-child(4) img,
+.logo-skill li:nth-child(5) img {
+    width: 180px;
 }
 
-.skill-right img {
-    margin: 10px;
-    width: 120px;
+
+/* Project */
+.project .myself .animationText {
+    color: var(--fontcolorgreen);
+}
+.project .myself {
+    font-size: var(--fontsizetittle);
+    justify-self: center;
+    align-self: center;
+}
+.project {
+    display: grid;
+    height: 100vh;
+    padding: 50px;
+}
+.container-project {
+    width: 100%;
+    display: grid;
+    height: 100%;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #2b2b2b;  
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.project img {
+    width: 50vw;
 }
 
 /* contact */
@@ -341,9 +379,11 @@ section#contact {
     align-items: center;
     grid-template-columns: 0.7fr 1fr;
 }
+section#contact .myself {
+    font-size: calc(var(--fontsizetittle) + 30px);
+}
 
 section#contact .myself .animationText {
-    font-size: calc(var(--fontsizetittle) + 30px);
     color: var(--fontcolorgreen);
 }
 
@@ -436,6 +476,9 @@ section#contact p {
 }
 
 @media only screen and (max-width: 768px ) {
+    .container-project {
+        padding: 10px;
+    }
     .container{
         display: flex;
         position: sticky;
@@ -491,12 +534,19 @@ section#contact p {
         margin-left: 10%;
     }
     section#about .container-about .about-left h1.myself,
-    .myself {
+    section#contact .myself {
+        font-size: var(--fontsizetittle);
+        justify-content: center;
+    }
+
+    .container-text .myself {
         font-size: var(--fontsizetittle);
     }
+
     .container-about,
     .container-skill,
-    section#contact {
+    section#contact,
+    .project {
         padding: 20px;
     }
     .skill-right img {
@@ -505,12 +555,14 @@ section#contact p {
     }
 }
 @media only screen and (max-width: 600px ) {
-    .about-right {
-        font-size: calc(var(--fontsizeparagraph) - 2px);
+    .logo-skill {
+        background-color: #1d1d1d;
     }
-    section#about .container-about .about-left h1.myself,
-    .myself {
-        font-size: calc(var(--fontsizetittle) - 5px);;
+    .logo-skill li {
+        width: 100%;
+    }
+    .about-right {
+        font-size: var(--fontsizeparagraph);
     }
     .container-about,
     .container-skill,

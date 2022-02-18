@@ -494,6 +494,7 @@ section#contact p {
         width: 30%;
         z-index: 2;
         height: 100vh;
+        transition: 0.8s ease-in-out;
     }
     .icon-medsos .fa {
         color: #fff;
@@ -535,12 +536,12 @@ section#contact p {
     }
     section#about .container-about .about-left h1.myself,
     section#contact .myself {
-        font-size: var(--fontsizetittle);
+        font-size: calc(var(--fontsizetittle) - 10px);
         justify-content: center;
     }
 
     .container-text .myself {
-        font-size: var(--fontsizetittle);
+        font-size: calc(var(--fontsizetittle) - 10px);
     }
 
     .container-about,
